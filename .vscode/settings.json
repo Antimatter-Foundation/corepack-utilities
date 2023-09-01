@@ -1,0 +1,24 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "corepack.dSYM": true,
+        ".vscode": true,
+        "test.dSYM": true,
+        "coreunpack.dSYM": true,
+        "coreunpack": true,
+        "corepack": true
+    },
+    "hide-files.files": [
+        "corepack.dSYM",
+        ".vscode",
+        "test.dSYM",
+        "coreunpack.dSYM",
+        "coreunpack",
+        "corepack"
+    ]
+}

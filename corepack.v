@@ -45,6 +45,8 @@ fn folder_to_corepackage(path string, v bool) ! {
 			json.close()
 }
 
+		if os.exists("$path/bin/" + filename + ".corepackage") { pn("Package Exists") exit(-1) }
+
 		mut package := os.create("$path/bin/" + filename + ".corepackage") or { pn(err.msg()) exit(-1) }
 
 
