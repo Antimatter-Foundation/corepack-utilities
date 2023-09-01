@@ -8,6 +8,6 @@ A set of tools for CORE: FRACTURE Modding
 ## Building
 Requires [V](https://vlang.io/) 0.4
 
-`git clone https://github.com/SUBARCTIC-REALM/corepack-utilities`
-`cd corepack-utilities`
-`v corepacker.v && v coreunpacker.v`
+```git clone https://github.com/SUBARCTIC-REALM/corepack-utilities
+cd corepack-utilities
+v corepacker.v && v coreunpacker.v```
