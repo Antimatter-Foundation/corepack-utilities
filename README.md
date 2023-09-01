@@ -6,7 +6,7 @@ A set of tools for CORE: FRACTURE Modding
 `coreunpacker <Mod Package>` - Unpack the mod package
 
 ## Building
-Requires [V](https://vlang.io/) 0.4
+Requires [V 0.4](https://vlang.io/)
 
 ```git clone https://github.com/SUBARCTIC-REALM/corepack-utilities
 cd corepack-utilities
