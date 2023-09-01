@@ -10,4 +10,5 @@ Requires [V 0.4](https://vlang.io/)
 
 ```git clone https://github.com/SUBARCTIC-REALM/corepack-utilities
 cd corepack-utilities
-v corepacker.v && v coreunpacker.v```
+v corepacker.v && v coreunpacker.v
+```
