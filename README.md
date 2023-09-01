@@ -2,7 +2,7 @@
 A set of tools for CORE: FRACTURE Modding
 
 ## Usage
-`corepacker <Mod Folder>` - Pack the mod folder into a new .corepackage file
+`corepacker <Mod Folder>` - Pack the mod folder into a new .corepackage file<br>
 `coreunpacker <Mod Package>` - Unpack the mod package
 
 ## Building
