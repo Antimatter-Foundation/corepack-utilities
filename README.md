@@ -1,6 +1,8 @@
 # corepack-utilities
 A set of tools for CORE: FRACTURE Modding
 
+(extremely shitty)
+
 ## Usage
 `corepacker <Mod Folder>` - Pack the mod folder into a new .corepackage file<br>
 `coreunpacker <Mod Package>` - Unpack the mod package
