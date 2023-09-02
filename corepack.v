@@ -30,7 +30,7 @@ fn folder_to_corepackage(path string, v bool) ! {
 		os.rm("$path/bin/coremod.temp") or { pn(err.msg()) exit(-1) }
 
 		filename := os.file_name(path)
-
+		if !os.is_dir_empty("$path/bin/") { pn("/bin contains a mod binary, remove it first before packing your mod") exit(-1) }
 		if !os.exists("$path/datapack.json") {
 			sample := '{
 	"version" : "0.0.0",
