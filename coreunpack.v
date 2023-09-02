@@ -41,8 +41,15 @@ fn corepackage_to_folder(path string, v bool) ! {
 		language_pointer := file.read_bytes_at(0x0A, 0x11).bytestr()
 		package_pointer := file.read_bytes_at(0x0A, 0x1B).bytestr()
 
-		package := file.read_bytes_at(filelen - package_pointer.int() - 0x04, package_pointer.u32() + 0x04)
+		json := file.read_bytes_at(language_pointer.int() - json_pointer.int(), json_pointer.u32())
+		language := file.read_bytes_at(package_pointer.int() - language_pointer.int(), language_pointer.u32())
+		package := file.read_bytes_at(filelen - package_pointer.int(), package_pointer.u32())
 
+		println("###")
+		println(json.bytestr())
+		println("###")
+		println(language.bytestr())
+		println("###")
 		println("JSON Address\n$json_pointer\n\nLanguage Metadata Address\n$language_pointer\n\nPackage Address\n$package_pointer\n\n")
 		println("Package Length\n\n\n")
 

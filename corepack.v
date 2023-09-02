@@ -64,7 +64,7 @@ fn folder_to_corepackage(path string, v bool) ! {
 
 		json_pointer := u32(0x25).hex_full()
 		language_pointer := u32(0x25 + jsonbytes.len).hex_full()
-		package_pointer := u32(0x25 + jsonbytes.len + locbytes.len - 4).hex_full()
+		package_pointer := u32(0x25 + jsonbytes.len + locbytes.len).hex_full()
 
 		package.write_string("COREPKG") or { pn(err.msg()) exit(-1) }
 
@@ -92,7 +92,6 @@ fn folder_to_corepackage(path string, v bool) ! {
 
 	} else { pn("Target path is not a directory") exit(-1)}
 }
-
 
 fn pn(msg string) {
 	println(crayon.new("PANIC /// $msg".to_upper()).red())
