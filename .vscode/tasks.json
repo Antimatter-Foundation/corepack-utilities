@@ -6,10 +6,8 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "v",
-            "args": [
-                "-g",		    // add more compiler options here if necessary
-                "${relativeFile}"   // or modify it according to your requirements
+            "command": "notify-send --app-name 'Visual Studio Code' 'Сборка Начата' '${relativeFile}'; v -g -enable-globals ${relativeFile}",
+            "args": [ // or modify it according to your requirements
             ],
             "group": "build",
             "presentation": {
@@ -17,7 +15,6 @@
             },
             "problemMatcher": {
                 "owner": "v",
-                // "fileLocation": ["relative", "${workspaceFolder}"],
                 "fileLocation": ["relative", "${workspaceFolder}"],
                 "pattern": {
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
@@ -28,6 +25,13 @@
                     "message": 5
                 }
             }
+        },
+        {
+            "label": "finish",
+            "type": "shell",
+            "command": "notify-send --app-name 'Visual Studio Code' 'Сборка Завершена' '${relativeFile}'; play -q -v 0.05 '/home/vasm/Документы/performancesaved.wav'",
+            "args": [
+            ],
         }
     ]
 }
